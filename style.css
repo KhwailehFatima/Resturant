@@ -1,0 +1,55 @@
+html{
+    background-color: rgb(58, 54, 54)
+}
+header{
+    width: 90%;
+    height: 100px;
+
+    background-color: rgb(58, 54, 54);}
+body{
+    
+
+}
+main{
+    background-color: rgb(116, 108, 108);
+
+    width: 90%;
+    height: 400px;
+    position: absolute;
+    margin-top: 100px;
+     margin-left: 50px;
+   
+}
+.head_tag{
+    position: relative;
+    margin-left: 600px;
+    font-size: 40px;
+    color: azure;
+}
+.namelogo{
+    color: azure;
+    position: relative;
+    margin-left: 100px;
+    font-size: 40px;
+}
+#formID{
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin-top: 50px;
+    color: azure;
+}
+table{
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin-left:200px ;
+    
+
+}
+.table{
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin-left:200px ; 
+}
