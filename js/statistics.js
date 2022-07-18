@@ -77,7 +77,7 @@ function renderAllFood() {
      
     if (foodLocalStorage !== null) {
         for (let i = 0; i < foodLocalStorage.length; i++) {
-            new Food(foodLocalStorage[i].foodName, foodLocalStorage[i].type, foodLocalStorage[i].price);
+            new Food(foodLocalStorage[i].foodName, foodLocalStorage[i].type, foodLocalStorage[i].price+"JD");
 
         }
     }

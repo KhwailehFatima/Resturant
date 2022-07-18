@@ -42,6 +42,7 @@ function handleSubmit(event) {
     localStorage.setItem("Food", JSON.stringify(allFood));
     newFood.id();
      newFood.render();
+     localStorage.clear()
 }
 // this website helped me to write the table
 // https://www.delftstack.com/howto/javascript/create-table-javascript/#:~:text=To%20create%20an%20HTML%20element,createElement('table')%20.
@@ -97,6 +98,4 @@ table.appendChild(tableRowHeader);
     row.appendChild(price)
     table.appendChild(row)
     main[0].appendChild(table)
-     
-}
- 
+ }
