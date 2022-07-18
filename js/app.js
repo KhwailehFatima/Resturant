@@ -6,8 +6,11 @@ const main = document.getElementsByTagName('main');
 const table = document.createElement('table');
 table.className = 'table';
 // create a constructor
+ 
+function Food( foodName, foodType, price) {
+ 
 function Food(foodID, foodName, foodType, price) {
-     
+      
     this.foodName = foodName;
     this.foodType = foodType;
     this.price = price;
@@ -23,8 +26,8 @@ Food.prototype.id = function () {
 const form = document.getElementById("formID");
 form.addEventListener('submit', handleSubmit)
 
-createTable();
-
+ createTable();
+ 
 // Form sumbission has a default behavior of reloading the page
 function handleSubmit(event) {
     event.preventDefault(); //prevent default refreshing
@@ -35,11 +38,16 @@ function handleSubmit(event) {
      
     let price = event.target.price.value;
     let newFood= new Food(foodName,foodType,price);
-    newFood.render();
+      
+    localStorage.setItem("Food", JSON.stringify(allFood));
+    newFood.id();
+     newFood.render();
 }
 // this website helped me to write the table
 // https://www.delftstack.com/howto/javascript/create-table-javascript/#:~:text=To%20create%20an%20HTML%20element,createElement('table')%20.
 
+  
+ 
 function createTable(){
 
 let tableRowHeader=document.createElement("tr");
@@ -66,7 +74,8 @@ tableRowHeader.appendChild(tableHeader4);
 
 table.appendChild(tableRowHeader);
 }
-Food.prototype.render=function(){
+ 
+ Food.prototype.render=function(){
     const row=document.createElement("tr");
     const id=document.createElement("td");
     id.className='table';
