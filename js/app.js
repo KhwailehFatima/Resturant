@@ -6,7 +6,7 @@ const main = document.getElementsByTagName('main');
 const table = document.createElement('table');
 table.className = 'table';
 // create a constructor
-function Food(foodID, foodName, foodType, price) {
+function Food(foodName, foodType, price) {
      
     this.foodName = foodName;
     this.foodType = foodType;
