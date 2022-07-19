@@ -7,7 +7,7 @@ const table = document.createElement('table');
 table.className = 'table';
 // create a constructor
   
- 
+console.log('lll') 
 function Food( foodName, foodType, price) {
       
     this.foodName = foodName;
@@ -38,37 +38,37 @@ function handleSubmit(event) {
     let newFood= new Food(foodName,foodType,price);
       
     newFood.id();
-    localStorage.setItem("Food", JSON.stringify(allFood));
+     localStorage.setItem("Food", JSON.stringify(allFood));
 
-    //newFood.render();
+ //   newFood.render();
 }
 // this website helped me to write the table
 // https://www.delftstack.com/howto/javascript/create-table-javascript/#:~:text=To%20create%20an%20HTML%20element,createElement('table')%20.
  
   
-/*
-Food.prototype.render =function(){
 
-    const row=document.createElement("tr");
-    const id=document.createElement("td");
-    id.className='table';
-    const name=document.createElement("td");
-    name.className='table';
-    const type=document.createElement("td");
-    type.className='table';
-    const price=document.createElement("td");
-    price.className='table';
-    
-    id.textContent=this.id();
-    name.textContent=this.foodName;
-    type.textContent=this.foodType;
-    price.textContent=this.price;
-    
-    row.appendChild(id);
-    row.appendChild(name);
-    row.appendChild(type);
-    row.appendChild(price);
-    table.appendChild(row);
-    main[0].appendChild(table);
+// Food.prototype.render =function(){
 
-}
+//     const row=document.createElement("tr");
+//     const id=document.createElement("td");
+//     id.className='table';
+//     const name=document.createElement("td");
+//     name.className='table';
+//     const type=document.createElement("td");
+//     type.className='table';
+//     const price=document.createElement("td");
+//     price.className='table';
+    
+//     id.textContent=this.id();
+//     name.textContent=this.foodName;
+//     type.textContent=this.foodType;
+//     price.textContent=this.price;
+    
+//     row.appendChild(id);
+//     row.appendChild(name);
+//     row.appendChild(type);
+//     row.appendChild(price);
+//     table.appendChild(row);
+//     main[0].appendChild(table);
+
+// }
