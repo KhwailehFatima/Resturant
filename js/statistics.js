@@ -1,20 +1,20 @@
-'use strict'
-const main = document.getElementsByTagName('main');
-const table = document.createElement('table');
+ 'use strict'
+const mainTwo = document.getElementsByTagName('main');
+const tableTwo = document.createElement('table');
 table.className = 'table';
-// create a constructor
-let allFood = [];
-
+// // create a constructor
+let allFoodTwo=[];
+ 
 function Food(foodName, foodType, price) {
      
     this.foodName = foodName;
     this.foodType = foodType;
     this.price = price;
-    allFood.push(this);
+    allFoodTwo.push(this);
 }
-let count=0;
+let countTwo=0;
 Food.prototype.id = function () {
-    return count++ + 1000;
+    return countTwo++ + 1000;
 }
 
  
@@ -45,9 +45,10 @@ function createTable(){
     tableRowHeader.appendChild(tableHeader3);
     tableRowHeader.appendChild(tableHeader4);
     
-    table.appendChild(tableRowHeader);
+    tableTwo.appendChild(tableRowHeader);
     }
-Food.prototype.render=function(){
+
+    Food.prototype.render=function(){
     const row=document.createElement("tr");
     const id=document.createElement("td");
     id.className='table';
@@ -67,22 +68,22 @@ Food.prototype.render=function(){
     row.appendChild(name)
     row.appendChild(type)
     row.appendChild(price)
-    table.appendChild(row)
-    main[0].appendChild(table)
+    tableTwo.appendChild(row)
+    mainTwo[0].appendChild(tableTwo)
      
 }
 
 function renderAllFood() {
     let foodLocalStorage = JSON.parse(localStorage.getItem("Food"))
-     
+     console.log(foodLocalStorage)
     if (foodLocalStorage !== null) {
         for (let i = 0; i < foodLocalStorage.length; i++) {
             new Food(foodLocalStorage[i].foodName, foodLocalStorage[i].foodType, foodLocalStorage[i].price+"JD");
 
         }
     }
-    for (let i = 0; i < allFood.length; i++) {
-        allFood[i].render()
+    for (let i = 0; i < allFoodTwo.length; i++) {
+        allFoodTwo[i].render()
     }
 }
 
