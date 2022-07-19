@@ -6,11 +6,15 @@ const main = document.getElementsByTagName('main');
 const table = document.createElement('table');
 table.className = 'table';
 // create a constructor
+ 
+function Food(foodName, foodType, price) {
+     
+ 
   
 console.log('lll') 
 function Food( foodName, foodType, price) {
       
-    this.foodName = foodName;
+     this.foodName = foodName;
     this.foodType = foodType;
     this.price = price;
     allFood.push(this);
