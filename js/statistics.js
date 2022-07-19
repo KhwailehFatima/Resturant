@@ -1,10 +1,11 @@
 'use strict'
 const main = document.getElementsByTagName('main');
- const table = document.createElement('table');
+const table = document.createElement('table');
 table.className = 'table';
 // create a constructor
 let allFood = [];
-function Food( foodName, foodType, price) {
+
+function Food(foodName, foodType, price) {
      
     this.foodName = foodName;
     this.foodType = foodType;
@@ -16,11 +17,10 @@ Food.prototype.id = function () {
     return count++ + 1000;
 }
 
-//let count=0;
-Food.prototype.id = function () {
-    return count++ + 1000;
-}
+ 
+
 createTable();
+
 function createTable(){
 
     let tableRowHeader=document.createElement("tr");
@@ -77,7 +77,7 @@ function renderAllFood() {
      
     if (foodLocalStorage !== null) {
         for (let i = 0; i < foodLocalStorage.length; i++) {
-            new Food(foodLocalStorage[i].foodName, foodLocalStorage[i].type, foodLocalStorage[i].price+"JD");
+            new Food(foodLocalStorage[i].foodName, foodLocalStorage[i].foodType, foodLocalStorage[i].price+"JD");
 
         }
     }
